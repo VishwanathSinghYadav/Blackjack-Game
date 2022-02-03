@@ -17,7 +17,7 @@ body {
     color: white;
 }
 
-#message-el {
+#title-id {
     font-style: italic;
 }
 
@@ -27,9 +27,28 @@ button {
     font-weight: bold;
     border: none;
     border-radius: 3px;
-    padding: 5px 50px 5px 50px;
+    /* padding: 5px 50px 5px 50px; */
+    width: 150px;
+    height: 30px;
+    max-height: 40px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+button:active {
+    transform: translateY(2px);
 }
 
 p {
-    padding: 5px 50px 5px 50px;
+    /* padding: 5px 50px 5px 50px; */
+    width: 300px;
+    height: 30px;
+    max-height: 40px;
+    display: inline-block;
+}
+
+#player-id {
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
 }
