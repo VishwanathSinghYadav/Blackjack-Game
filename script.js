@@ -9,7 +9,6 @@ let cardsEl = document.getElementById("cards-id");
 let sumEl = document.getElementById("sum-id");
 let playerEl = document.getElementById("player-id")
 
-
 let player = {
     name: "VISH",
     chips: 100,
@@ -37,13 +36,16 @@ function startGame() {
     sum = firstCard + secondCard;
 
     if (inGame === false) {
+        inGame = true;
         renderGame();
 
     }
 }
 
 function renderGame() {
-    inGame = true;
+
+    inGame = false;
+    hasBlackjack = false;
 
     titleEl.style.visibility = "hidden";
     cardsEl.textContent = "Cards: ";
@@ -55,12 +57,15 @@ function renderGame() {
 
     if (sum < 21) {
         message = "Want to add an extra card?";
+        inGame = true;
     } else if (sum === 21) {
-        message = "That's a Blackjack!!! \n ♠ "
+        message = "That's a Blackjack!!! \n ♠ ";
         hasBlackjack = true;
-    } else {
-        message = "You are out of luck. Try again? "
         inGame = false;
+    } else {
+        message = "You are out of luck. Try again? ";
+        inGame = false;
+
     }
 
     messageEl.innerText = message;
@@ -73,5 +78,11 @@ function newCard() {
         sum += newCard;
         cards.push(newCard);
         renderGame();
+    }
+}
+
+function reset() {
+    if (hasBlackjack === true || inGame === false) {
+
     }
 }
