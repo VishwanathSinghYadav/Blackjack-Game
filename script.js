@@ -38,7 +38,6 @@ function startGame() {
     if (inGame === false) {
         inGame = true;
         renderGame();
-
     }
 }
 
@@ -81,8 +80,7 @@ function newCard() {
     }
 }
 
-function reset() {
-    if (hasBlackjack === true || inGame === false) {
 
-    }
+function resetGame() {
+    startGame();
 }
